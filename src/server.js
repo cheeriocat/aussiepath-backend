@@ -56,7 +56,7 @@ app.use((err, _req, res, _next) => {
 });
 
 // ── Start ──────────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n🚀  AussiePath API (SQLite) → http://localhost:${PORT}`);
   console.log(`   Health check   → http://localhost:${PORT}/api/health\n`);
 });
