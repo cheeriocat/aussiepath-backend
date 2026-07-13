@@ -48,14 +48,3 @@ Launches API on `http://localhost:5000`:
 npm run dev
 ```
 
----
-
-## ☁️ Deploying to Render / Railway
-
-Because SQLite writes directly to a local file (`backend/data/aussiepath.db`), serverless platforms (like Vercel or AWS Lambda) will wipe out data changes. You should host the backend on a persistent container service:
-
-1. Connect this repository to **Render.com** or **Railway.app**.
-2. Add a **Persistent Disk** (minimum `1 GB`) to prevent database resets.
-3. Set the mount path of the disk to: `/opt/render/project/src/data` (to match the local `data/` folder).
-4. Configure the start command: `npm start`.
-5. Expose the environment port: `PORT = 5000`.
